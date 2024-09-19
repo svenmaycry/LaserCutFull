@@ -788,6 +788,9 @@ body > main {
   left: auto;
   right: 75px;
 }
+.swiper--reviews {
+  position: static;
+}
 
 .main-header {
   position: fixed;
@@ -3065,6 +3068,7 @@ body > main {
 }
 .reviews__swiper-cnt {
   position: relative;
+  padding: 0 45px;
 }
 .reviews__list {
   padding: 0;
