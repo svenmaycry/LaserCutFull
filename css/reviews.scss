@@ -1,0 +1,57 @@
+.reviews {
+  padding: 50px 0;
+
+  &__navigation {
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    margin-bottom: 30px;
+
+    @media (max-width: 767px) {
+      column-gap: 5px;
+    }
+  }
+
+  &__swiper-cnt {
+    position: relative;
+  }
+
+  &__list {
+    padding: 0;
+  }
+
+  &-item {
+
+    &__link {
+      display: block;
+      border-radius: 12px;
+      overflow: hidden;
+
+      &::after {
+        content: '';
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        display: inline-block;
+        border-radius: 50%;
+        width: min(8vw, 52px);
+        height: min(8vw, 52px);
+        background: url('https://svgshare.com/i/1AU2.svg') center no-repeat;
+      }
+
+      @media (any-hover: hover) {
+        &:hover {
+          .reviews-item__img {
+            transform: scale(1.07);
+          }
+        }
+      }
+    }
+
+    &__img {
+      transition: transform 0.3s ease 0s;
+      aspect-ratio: 16 / 9;
+    }
+  }
+}
