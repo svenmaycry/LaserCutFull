@@ -3,6 +3,7 @@ import {initReviews} from "./blocks/reviews.js";
 
 import {initMainPersonalSwiper} from "./swiper/main-personal-swiper.js";
 import {initMainBloggersSwiper} from "./swiper/main-bloggers-swiper.js";
+import {initMainCategorisSwiper} from "./swiper/main-categories-swiper.js";
 import {initBloggerVideoSwiper} from "./swiper/blogger-swiper.js";
 import {initModalMistakes} from "./blocks/modal-mistakes.js";
 
@@ -11,6 +12,9 @@ initHeader();
 
 // Код слайдеров секции баннеров на Главной
 initMainPersonalSwiper();
+
+// Код слайдеров секции катейгорий на Главной
+initMainCategorisSwiper();
 
 // Код слайдера секции блоггеров на Главной
 initMainBloggersSwiper();
