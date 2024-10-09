@@ -36,7 +36,7 @@
   }
 
   &-item {
-    max-width: 404px;
+    max-width: 387px;
     padding: 5px 3px;
 
     &__link {
@@ -55,15 +55,15 @@
     }
 
     &__img {
-      width: 100px;
-      height: 100px;
+      width: 80px;
+      height: 80px;
       align-self: start;
       border-radius: 50%;
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 
       @media (max-width: 1600px) {
-        width: 80px;
-        height: 80px;
+        width: 60px;
+        height: 60px;
       }
 
       @media (max-width: 767px) {
