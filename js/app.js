@@ -6,6 +6,7 @@ import {initMainBloggersSwiper} from "./swiper/main-bloggers-swiper.js";
 import {initMainCategorisSwiper} from "./swiper/main-categories-swiper.js";
 import {initBloggerVideoSwiper} from "./swiper/blogger-swiper.js";
 import {initModalMistakes} from "./blocks/modal-mistakes.js";
+import {initSpoilers} from "./blocks/test-spoilers.js";
 
 // Код спойлеров, табов, диначического адаптива в Шапке
 initHeader();
@@ -27,3 +28,6 @@ initReviews();
 
 // Код модального окна исправление неточностей
 initModalMistakes();
+
+// Тестовый код спойлеров
+initSpoilers();
