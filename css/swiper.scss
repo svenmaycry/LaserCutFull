@@ -19,11 +19,11 @@
   }
 
   &-button-prev {
-    background: $mainWhiteColor url('https://svgshare.com/i/18u5.svg') center / 12px no-repeat;
+    background: $mainWhiteColor url('/img/icons/icon-left-swiper.svg') center / 12px no-repeat;
   }
 
   &-button-next {
-    background: $mainWhiteColor url('https://svgshare.com/i/18tt.svg') center / 12px no-repeat;
+    background: $mainWhiteColor url('/img/icons/icon-right-swiper.svg') center / 12px no-repeat;
   }
 
   &-button-disabled {
@@ -134,12 +134,11 @@
       }
 
       &-scrollbar {
-        position: absolute;
-        left: 33px;
-        bottom: -35px;
+        display: block !important;
+        position: static;
         width: 88%;
         height: 2px;
-        z-index: 18;
+        margin-top: 26px;
 
         &-drag {
           top: -2px;

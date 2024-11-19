@@ -7,8 +7,9 @@ import {initMainCategorisSwiper} from "./swiper/main-categories-swiper.js";
 import {initBloggerVideoSwiper} from "./swiper/blogger-swiper.js";
 import {initModalMistakes} from "./blocks/modal-mistakes.js";
 import {initSpoilers} from "./blocks/test-spoilers.js";
+import {initModalPenguin} from "./blocks/modal-penguin.js";
 
-// Код спойлеров, табов, диначического адаптива в Шапке
+// Код спойлеров, табов, динамического адаптива в Шапке
 initHeader();
 
 // Код слайдеров секции баннеров на Главной
@@ -28,6 +29,9 @@ initReviews();
 
 // Код модального окна исправление неточностей
 initModalMistakes();
+
+// Код модального окна с пенгвином
+initModalPenguin();
 
 // Тестовый код спойлеров
 initSpoilers();

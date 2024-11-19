@@ -38,20 +38,28 @@
   &-item {
     max-width: 387px;
     padding: 5px 3px;
+    height: auto;
 
     &__link {
       display: flex;
-      align-items: center;
-      column-gap: min(2vw, 40px);
+      flex-direction: column;
+      row-gap: min(2vw, 20px);
+      height: 85%;
       cursor: pointer;
-      padding: 20px;
       border-radius: 12px;
       background-color: #F5F8FF;
       transition: box-shadow 0.2s ease-in;
+      padding: 20px;
 
       &:hover, &:focus {
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
       }
+    }
+
+    &__header {
+      display: inline-flex;
+      align-items: center;
+      column-gap: min(3vw, 20px);
     }
 
     &__img {
@@ -73,9 +81,9 @@
     }
 
     &__name {
-      font-size: clamp(16px, 3vw, 24px);
+      font-size: clamp(18px, 3vw, 24px);
       line-height: 1;
-      margin: 0 0 min(2vw, 15px);
+      margin: 0 0 min(2vw, 8px);
     }
 
     &__count {
@@ -86,7 +94,7 @@
 
       &::before {
         content: '';
-        background: url('https://svgshare.com/i/18w7.svg') 0 0 no-repeat;
+        background: url('/img/icons/icon-person-grey.svg') 0 0 no-repeat;
         display: inline-block;
         width: 12px;
         height: 12px;

@@ -1,7 +1,22 @@
 // СЕКЦИЯ БАНЕРА на главной
 .personal {
-  background: url('https://svgshare.com/i/18v3.svg') 100% 40% no-repeat;
+  position: relative;
   margin-bottom: min(3vw, 25px);
+
+  @media (min-width: 1521px) {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: url('/img/icons/icon-main-page-bg-triangles.svg') center top / contain no-repeat;
+      -ms-transform: translateX(-16%);
+      transform: translateX(-16%);
+    }
+  }
 
   &__wrapper {
     display: grid;
@@ -110,7 +125,7 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        background: $mainWhiteColor url('https://svgshare.com/i/189z.svg') center / 80% no-repeat;
+        background: $mainWhiteColor url('/img/icons/icon-fire.svg') center / 80% no-repeat;
         margin-right: 5px;
       }
     }
