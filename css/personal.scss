@@ -2,6 +2,7 @@
 .personal {
   position: relative;
   margin-bottom: min(3vw, 25px);
+  overflow: hidden;
 
   @media (min-width: 1521px) {
     &::before {
