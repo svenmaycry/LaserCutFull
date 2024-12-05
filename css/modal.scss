@@ -112,8 +112,12 @@
     position: fixed;
     width: 300px;
     height: 285px;
-    z-index: 1000;
     overflow: hidden;
+    z-index: 1000;
+
+    @media (max-width: 1023px) {
+      z-index: 9999999999;
+    }
 
     &__wrapper {
       position: relative;
@@ -154,9 +158,9 @@
       transition: right 0.3s ease-in;
 
       @media (max-width: 1023px) {
-        bottom: 15px;
-        width: 245px;
-        height: 330px;
+        bottom: -55px;
+        width: 220px;
+        height: 200px;
       }
 
       .modal-penguin {
@@ -176,6 +180,11 @@
         &__close-btn {
           top: 25px;
           right: 100px;
+
+          @media (max-width: 1023px) {
+            top: 10px;
+            right: 75px;
+          }
         }
       }
     }

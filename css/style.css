@@ -3351,8 +3351,13 @@ body > main {
   position: fixed;
   width: 300px;
   height: 285px;
-  z-index: 1000;
   overflow: hidden;
+  z-index: 1000;
+}
+@media (max-width: 1023px) {
+  .modal-penguin {
+    z-index: 9999999999;
+  }
 }
 .modal-penguin__wrapper {
   position: relative;
@@ -3390,9 +3395,9 @@ body > main {
 }
 @media (max-width: 1023px) {
   .modal-penguin--right {
-    bottom: 15px;
-    width: 245px;
-    height: 330px;
+    bottom: -55px;
+    width: 220px;
+    height: 200px;
   }
 }
 .modal-penguin--right .modal-penguin__wrapper:hover .modal-penguin__image, .modal-penguin--right .modal-penguin__wrapper:focus .modal-penguin__image {
@@ -3405,6 +3410,12 @@ body > main {
 .modal-penguin--right .modal-penguin__close-btn {
   top: 25px;
   right: 100px;
+}
+@media (max-width: 1023px) {
+  .modal-penguin--right .modal-penguin__close-btn {
+    top: 10px;
+    right: 75px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
