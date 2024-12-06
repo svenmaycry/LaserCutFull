@@ -1245,7 +1245,7 @@ body > main {
   top: 23px;
   right: 10px;
   transform: rotate(180deg);
-  background: url("/img/icons-simple/arrow-down-blue-icon.svg") 0 0/contain no-repeat;
+  background: url("/img/icons/icon-arrow-down-blue.svg") 0 0/contain no-repeat;
   transition: transform 0.3s, right 0.1s, top 0.1s, opacity 0.3s ease-in 0.1s;
 }
 @media (max-width: 1023px) {
