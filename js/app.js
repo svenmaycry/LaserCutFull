@@ -8,6 +8,7 @@ import {initBloggerVideoSwiper} from "./swiper/blogger-swiper.js";
 import {initModalMistakes} from "./blocks/modal-mistakes.js";
 import {initSpoilers} from "./blocks/test-spoilers.js";
 import {initModalPenguin} from "./blocks/modal-penguin.js";
+import {initModalPriceAlert} from "./blocks/modal-price-alert.js";
 
 // Код спойлеров, табов, динамического адаптива в Шапке
 initHeader();
@@ -30,8 +31,11 @@ initReviews();
 // Код модального окна исправление неточностей
 initModalMistakes();
 
-// Код модального окна с пенгвином
+// Код модального окна с пингвином
 initModalPenguin();
+
+// Код модального окна заморозки цен
+initModalPriceAlert();
 
 // Тестовый код спойлеров
 initSpoilers();
