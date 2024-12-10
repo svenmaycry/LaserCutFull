@@ -2,14 +2,18 @@ export const initHeader = () => {
   const body = document.querySelector('body');
   const headerIconMenuButton = document.querySelector('.js-icon-menu');
   const overlay = document.querySelector('.js-header-overlay');
-  const headerMain = document.querySelector('.js-main-header');
-  const headerTop = document.querySelector('.js-main-header-top');
-  const headerBot = document.querySelector('.js-main-header-bottom');
-  const headerLogo = document.querySelector('.js-main-header-logo');
-  const headerInput = document.querySelector('.js-search-header-input');
-  const headerMainNavItemLink = document.querySelectorAll('.js-main-nav-item-link');
+  const headerMain = document.querySelector('.js-header');
+  const headerTop = document.querySelector('.js-header-top');
+  const headerBot = document.querySelector('.js-header-bottom');
+  const headerLogo = document.querySelector('.js-header-logo');
+  const headerInput = document.querySelector('.js-search-form-input');
+  const headerNavItemLink = document.querySelectorAll('.js-nav-item-link');
   const headerCatalogBtn = document.querySelector('.js-catalog-btn');
   const mobileSearchBtn = document.querySelector('.js-mobile-search-btn');
+
+  let prevScrollPos = window.scrollY;
+  const headerHeight = headerMain.offsetHeight;
+  const SCROLL_THRESHOLD = 100;
 
 
 // Модуль работы с меню (бургер).
@@ -39,7 +43,7 @@ export const initHeader = () => {
       document.addEventListener("click", function (e) {
         if (bodyLockStatus && e.target.closest(".js-icon-menu")) {
           bodyLockToggle();
-          body.classList.toggle("main-nav-open");
+          body.classList.toggle("js-nav-open");
           if (mobileSearchBtn.classList.contains("--spoiler-active")) {
             body.classList.toggle('lock');
           }
@@ -62,7 +66,7 @@ export const initHeader = () => {
       function initSpoilers(spoilersArray, matchMedia) {
         spoilersArray.forEach(spoiler => {
 
-          const mainNavItem = spoiler.closest(".js-main-nav-item");
+          const mainNavItem = spoiler.closest(".js-nav-item");
 
           if (mainNavItem) {
             if (matchMedia.matches || spoiler.dataset.spoilerHeader === "click") {
@@ -95,7 +99,7 @@ export const initHeader = () => {
             headerCatalogBtn.style.opacity = '0.2';
             headerLogo.style.opacity = '0.5';
           }
-          if (!body.classList.contains("main-nav-open")) {
+          if (!body.classList.contains("js-nav-open")) {
             body.classList.add("lock");
           }
           e.preventDefault();
@@ -116,11 +120,11 @@ export const initHeader = () => {
             overlay.classList.toggle("--active", el.classList.contains("--spoiler-active"));
           }
 
-          if (window.innerWidth <= 1024 && !body.classList.contains("main-nav-open")) {
+          if (window.innerWidth <= 1024 && !body.classList.contains("js-nav-open")) {
             overlay.classList.toggle("--active");
           }
 
-          if (!body.classList.contains("main-nav-open")) {
+          if (!body.classList.contains("js-nav-open")) {
             body.classList.toggle("lock", el.classList.contains("--spoiler-active"));
           }
           e.preventDefault();
@@ -151,13 +155,13 @@ export const initHeader = () => {
       }
 
       function handleClickOutside(e) {
-        if (window.innerWidth >= 1025 && !e.target.closest(".js-main-nav-item")) {
+        if (window.innerWidth >= 1025 && !e.target.closest(".js-nav-item")) {
           hideSpoiler();
         }
-        if (window.innerWidth <= 767 && !e.target.closest(".js-main-nav-item") || e.target.closest(".js-icon-menu")) {
+        if (window.innerWidth <= 767 && !e.target.closest(".js-nav-item") || e.target.closest(".js-icon-menu")) {
           mobileSearchBtn.classList.remove("--spoiler-active");
         }
-        if (window.innerWidth <= 767 && !e.target.closest(".js-main-nav-item") && !e.target.closest(".js-icon-menu") && !body.classList.contains('main-nav-open')) {
+        if (window.innerWidth <= 767 && !e.target.closest(".js-nav-item") && !e.target.closest(".js-icon-menu") && !body.classList.contains('js-nav-open')) {
           overlay.classList.remove("--active");
           body.classList.remove("lock");
         }
@@ -186,7 +190,7 @@ export const initHeader = () => {
         tabTitle.setAttribute('data-tabs-header-title', index);
         tabsContents[index].setAttribute('data-tabs-header-item', index);
 
-        tabsContents[index].hidden = !tabTitle.classList.contains('main-nav-tab-active');
+        tabsContents[index].hidden = !tabTitle.classList.contains('js-nav-tab-active');
 
         tabTitle.addEventListener('mouseover', () => {
           activateTab(tabsHeaderBlock, index);
@@ -200,10 +204,10 @@ export const initHeader = () => {
 
       tabsTitles.forEach((tabTitle, index) => {
         if (index === activeIndex) {
-          tabTitle.classList.add('main-nav-tab-active');
+          tabTitle.classList.add('js-nav-tab-active');
           tabsContents[index].hidden = false;
         } else {
-          tabTitle.classList.remove('main-nav-tab-active');
+          tabTitle.classList.remove('js-nav-tab-active');
           tabsContents[index].hidden = true;
         }
       });
@@ -312,10 +316,6 @@ export const initHeader = () => {
 // Модуль с моим кодом.
 
 // При скролле страницы показ и скрытие шапки.
-  let prevScrollPos = window.scrollY;
-  const headerHeight = headerMain.offsetHeight;
-  const SCROLL_THRESHOLD = 100;
-
   const showAndHideHeader = () => {
     let currentScrollPos = window.scrollY;
     if (prevScrollPos > currentScrollPos) headerMain.style.top = "0px";
@@ -326,8 +326,8 @@ export const initHeader = () => {
 
 // При клике на поиск закрытие Меню-бургер + Сохранение класса lock.
   const closeBurgerMenu = () => {
-    if (body.classList.contains("main-nav-open"))
-      body.classList.remove("main-nav-open", "lock");
+    if (body.classList.contains("js-nav-open"))
+      body.classList.remove("js-nav-open", "lock");
   };
 
 // При клике на меню удаление класса --active оверлея.
@@ -337,8 +337,8 @@ export const initHeader = () => {
 
 // При клике на меню и закрытие спойлеров мобильного меню.
   const closeSpoilersContent = () => {
-    if (body.classList.contains("main-nav-open")) {
-      headerMainNavItemLink.forEach((oneButton) => {
+    if (body.classList.contains("js-nav-open")) {
+      headerNavItemLink.forEach((oneButton) => {
         if (oneButton.classList.contains("--spoiler-active")) {
           oneButton.classList.remove("--spoiler-active");
         }
@@ -348,8 +348,8 @@ export const initHeader = () => {
 
 // Закрыть спойлера, оверлея и lock body, при ресайзе страницы.
   const closeSpoiler = () => {
-    if (!body.classList.contains("main-nav-open") && window.innerWidth <= 1024) {
-      headerMainNavItemLink.forEach((spoiler) => {
+    if (!body.classList.contains("js-nav-open") && window.innerWidth <= 1024) {
+      headerNavItemLink.forEach((spoiler) => {
         if (spoiler.classList.contains("--spoiler-active")) {
           spoiler.classList.remove("--spoiler-active");
           overlay.classList.remove("--active");
@@ -358,26 +358,18 @@ export const initHeader = () => {
       });
     }
 
-    if (body.classList.contains("main-nav-open") && window.innerWidth >= 1025) {
-      body.classList.remove("lock", "main-nav-open");
-      headerMainNavItemLink.forEach((spoiler) => {
+    if (body.classList.contains("js-nav-open") && window.innerWidth >= 1025) {
+      body.classList.remove("lock", "js-nav-open");
+      headerNavItemLink.forEach((spoiler) => {
         spoiler.classList.remove("--spoiler-active");
       });
     }
 
-    if (!body.classList.contains("main-nav-open") && window.innerWidth >= 678) {
-      body.classList.remove("lock", "main-nav-open");
+    if (!body.classList.contains("js-nav-open") && window.innerWidth >= 678) {
+      body.classList.remove("lock", "js-nav-open");
       mobileSearchBtn.classList.remove('--spoiler-active');
       overlay.classList.remove("--active");
     }
-  };
-
-// Менять класс у айтема Каталога
-  const prodClassChange = () => {
-    if (window.innerWidth <= 1024)
-      headerCatalogBtn.classList.remove('main-nav-item--catalog');
-    else if (window.innerWidth >= 1025)
-      headerCatalogBtn.classList.add('main-nav-item--catalog');
   };
 
 // Добавление / удаление классов у body и header в зависимости от скроллбара.
@@ -396,7 +388,7 @@ export const initHeader = () => {
 // Показ и скрытие кнопки закрытия в поиске.
   function showOrHideCloseBtn() {
 
-    const closeButton = document.querySelector('.js-input-header-close-btn');
+    const closeButton = document.querySelector('.js-input-form-close-btn');
 
     headerInput.addEventListener('input', function () {
       if (headerInput.value.trim() !== '') {
@@ -414,11 +406,11 @@ export const initHeader = () => {
     });
   }
 
-// Закрытие main-nav на мобилке при клмке на Поиск.
+// Закрытие main-nav на мобилке при клике на Поиск.
   const mainNavCloseOnMobile = () => {
-    if (window.innerWidth <= 767 && body.classList.contains('main-nav-open')) {
-      body.classList.remove('main-nav-open');
-      headerMainNavItemLink.forEach((oneButton) => {
+    if (window.innerWidth <= 767 && body.classList.contains('js-nav-open')) {
+      body.classList.remove('js-nav-open');
+      headerNavItemLink.forEach((oneButton) => {
         if (oneButton.classList.contains("--spoiler-active")) {
           oneButton.classList.remove("--spoiler-active");
         }
@@ -438,7 +430,6 @@ export const initHeader = () => {
 
   const onDocumentResize = () => {
     closeSpoiler();
-    prodClassChange();
     updatePadding();
   };
 
@@ -449,7 +440,7 @@ export const initHeader = () => {
   const onInputClick = (e) => {
     if (window.innerWidth >= 768) {
       overlayClose(e);
-      headerMainNavItemLink.forEach((spoiler) => {
+      headerNavItemLink.forEach((spoiler) => {
         if (spoiler.classList.contains("--spoiler-active")) {
           spoiler.classList.remove("--spoiler-active");
           overlay.classList.remove("--active");
