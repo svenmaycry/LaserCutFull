@@ -9,9 +9,13 @@ import {initModalMistakes} from "./blocks/modal-mistakes.js";
 import {initSpoilers} from "./blocks/test-spoilers.js";
 import {initModalPenguin} from "./blocks/modal-penguin.js";
 import {initModalPriceAlert} from "./blocks/modal-price-alert.js";
+import {initPurchaseSwiper} from "./swiper/purchase-swiper.js";
 
 // Код спойлеров, табов, динамического адаптива в Шапке
 initHeader();
+
+// Код секции порядка покупки на Главной
+initPurchaseSwiper();
 
 // Код слайдеров секции баннеров на Главной
 initMainPersonalSwiper();
