@@ -71,18 +71,6 @@ export const initDemo = () => {
         slidesPerGroup: 1,
         spaceBetween: 30,
       },
-
-      1400: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
-      },
-
-      1268: {
-        slidesPerView: 1,
-        slidesPerGroup: 1,
-        spaceBetween: 30,
-      },
     }
   });
 }
