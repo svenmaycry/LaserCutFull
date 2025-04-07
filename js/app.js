@@ -10,6 +10,7 @@ import {initSpoilers} from "./blocks/test-spoilers.js";
 import {initModalPenguin} from "./blocks/modal-penguin.js";
 import {initModalPriceAlert} from "./blocks/modal-price-alert.js";
 import {initPurchaseSwiper} from "./swiper/purchase-swiper.js";
+import {initDemo} from "./blocks/demo.js";
 
 // Код спойлеров, табов, динамического адаптива в Шапке
 initHeader();
@@ -43,3 +44,6 @@ initModalPriceAlert();
 
 // Тестовый код спойлеров
 initSpoilers();
+
+// Код демо
+initDemo();
