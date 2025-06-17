@@ -1912,12 +1912,12 @@ body > main {
 .demo .swiper-button-prev {
   left: 4px;
   right: auto;
-  background: rgb(255, 255, 255) url("/img/icons/icon-left-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-left-swiper.svg") center/12px no-repeat;
 }
 .demo .swiper-button-next {
   right: 4px;
   left: auto;
-  background: rgb(255, 255, 255) url("/img/icons/icon-right-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-right-swiper.svg") center/12px no-repeat;
 }
 .demo .swiper-pagination {
   left: 60%;

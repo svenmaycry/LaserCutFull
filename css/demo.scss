@@ -224,13 +224,13 @@
     &-button-prev {
       left: 4px;
       right: auto;
-      background: $mainWhiteColor url('/img/icons/icon-left-swiper.svg') center / 12px no-repeat;
+      background: $mainWhiteColor url('../img/icons/icon-left-swiper.svg') center / 12px no-repeat;
     }
 
     &-button-next {
       right: 4px;
       left: auto;
-      background: $mainWhiteColor url('/img/icons/icon-right-swiper.svg') center / 12px no-repeat;
+      background: $mainWhiteColor url('../img/icons/icon-right-swiper.svg') center / 12px no-repeat;
     }
 
     &-pagination {
