@@ -188,7 +188,7 @@
     &-button-prev {
       left: 330px;
       right: auto;
-      background: $mainWhiteColor url('/img/icons/icon-left-swiper.svg') center / 12px no-repeat;
+      background: $mainWhiteColor url('../img/icons/icon-left-swiper.svg') center / 12px no-repeat;
 
       @media (max-width: 767px) {
         left: 225px;
@@ -202,7 +202,7 @@
     &-button-next {
       left: 380px;
       right: auto;
-      background: $mainWhiteColor url('/img/icons/icon-right-swiper.svg') center / 12px no-repeat;
+      background: $mainWhiteColor url('../img/icons/icon-right-swiper.svg') center / 12px no-repeat;
 
       @media (max-width: 767px) {
         left: 280px;

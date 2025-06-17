@@ -682,10 +682,10 @@ body > main {
   outline: none;
 }
 .swiper-button-prev {
-  background: rgb(255, 255, 255) url("/img/icons/icon-left-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-left-swiper.svg") center/12px no-repeat;
 }
 .swiper-button-next {
-  background: rgb(255, 255, 255) url("/img/icons/icon-right-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-right-swiper.svg") center/12px no-repeat;
 }
 .swiper-button-disabled {
   opacity: 0.35;
@@ -1139,7 +1139,7 @@ body > main {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("/img/icons/icon-search.svg") 3px/86% no-repeat;
+  background: url("../img/icons/icon-search.svg") 3px/86% no-repeat;
 }
 .header .mobile-search__btn:hover, .header .mobile-search__btn:focus {
   background-color: rgba(128, 128, 128, 0.1882352941);
@@ -1154,7 +1154,7 @@ body > main {
   }
   .header .mobile-search__btn.--spoiler-active::before {
     content: "";
-    background: url("/img/icons/icon-close.svg") 3px/86% no-repeat;
+    background: url("../img/icons/icon-close.svg") 3px/86% no-repeat;
   }
 }
 @media (max-width: 767px) {
@@ -1353,7 +1353,7 @@ body > main {
   top: 23px;
   right: 10px;
   transform: rotate(180deg);
-  background: url("/img/icons/icon-arrow-down-blue.svg") 0 0/contain no-repeat;
+  background: url("../img/icons/icon-arrow-down-blue.svg") 0 0/contain no-repeat;
   transition: transform 0.3s, right 0.1s, top 0.1s, opacity 0.3s ease-in 0.1s;
 }
 @media (max-width: 1023px) {
@@ -2136,7 +2136,7 @@ body > main {
 .purchase-order .swiper-button-prev {
   left: 330px;
   right: auto;
-  background: rgb(255, 255, 255) url("/img/icons/icon-left-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-left-swiper.svg") center/12px no-repeat;
 }
 @media (max-width: 767px) {
   .purchase-order .swiper-button-prev {
@@ -2151,7 +2151,7 @@ body > main {
 .purchase-order .swiper-button-next {
   left: 380px;
   right: auto;
-  background: rgb(255, 255, 255) url("/img/icons/icon-right-swiper.svg") center/12px no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-right-swiper.svg") center/12px no-repeat;
 }
 @media (max-width: 767px) {
   .purchase-order .swiper-button-next {
@@ -2183,7 +2183,7 @@ body > main {
     z-index: -1;
     width: 100%;
     height: 100%;
-    background: url("/img/icons/icon-main-page-bg-triangles.svg") center top/contain no-repeat;
+    background: url("../img/icons/icon-main-page-bg-triangles.svg") center top/contain no-repeat;
     -ms-transform: translateX(-16%);
     transform: translateX(-16%);
   }
@@ -2288,7 +2288,7 @@ body > main {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgb(255, 255, 255) url("/img/icons/icon-fire.svg") center/80% no-repeat;
+  background: rgb(255, 255, 255) url("../img/icons/icon-fire.svg") center/80% no-repeat;
   margin-right: 5px;
 }
 .personal-about__list {
@@ -2534,7 +2534,7 @@ body > main {
 }
 .main-bloggers-item__count::before {
   content: "";
-  background: url("/img/icons/icon-person-grey.svg") 0 0 no-repeat;
+  background: url("../img/icons/icon-person-grey.svg") 0 0 no-repeat;
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -2995,7 +2995,7 @@ body > main {
   }
 }
 .blogger-static__item--video::after {
-  background: url("/img/icons/icon-play-red.svg") 0 0/contain no-repeat;
+  background: url("../img/icons/icon-play-red.svg") 0 0/contain no-repeat;
 }
 @media (max-width: 767px) {
   .blogger-static__item--video::after {
@@ -3015,7 +3015,7 @@ body > main {
   }
 }
 .blogger-static__item--subscribers::after {
-  background: url("/img/icons/icon-person-blue.svg") 0 0/contain no-repeat;
+  background: url("../img/icons/icon-person-blue.svg") 0 0/contain no-repeat;
 }
 .blogger-static__item--views {
   top: 160px;
@@ -3033,7 +3033,7 @@ body > main {
   }
 }
 .blogger-static__item--views::after {
-  background: url("/img/icons/icon-eye-red.svg") 0 0/contain no-repeat;
+  background: url("../img/icons/icon-eye-red.svg") 0 0/contain no-repeat;
 }
 @media (max-width: 767px) {
   .blogger-static--bloggers {
@@ -3094,7 +3094,7 @@ body > main {
   border-radius: 50%;
   width: min(8vw, 52px);
   height: min(8vw, 52px);
-  background: url("/img/icons/icon-play-blue.svg") center no-repeat;
+  background: url("../img/icons/icon-play-blue.svg") center no-repeat;
 }
 @media (any-hover: hover) {
   .blogger-video-item__link:hover, .blogger-video-item__link:focus {
@@ -3247,14 +3247,14 @@ body > main {
 }
 .managers-stats-item__rating-value::after {
   content: "";
-  background: url("/img/icons/icon-star.svg") 0 0 no-repeat;
+  background: url("../img/icons/icon-star.svg") 0 0 no-repeat;
   display: inline-block;
   width: 17px;
   height: 15px;
 }
 
 .manager {
-  background: #F3F8FF url("/img/icons/icon-manager-triangles.svg") 0 30px/35% no-repeat;
+  background: #F3F8FF url("../img/icons/icon-manager-triangles.svg") 0 30px/35% no-repeat;
 }
 @media (max-width: 767px) {
   .manager {
@@ -3355,7 +3355,7 @@ body > main {
   left: -80px;
   width: 58px;
   height: 38px;
-  background: url("/img/icons/icon-right-quote.svg") center/contain no-repeat;
+  background: url("../img/icons/icon-right-quote.svg") center/contain no-repeat;
 }
 @media (max-width: 767px) {
   .manager-info__faq::before {
@@ -3583,7 +3583,7 @@ body > main {
   border-radius: 50%;
   width: min(8vw, 52px);
   height: min(8vw, 52px);
-  background: url("/img/icons/icon-play-blue.svg") center no-repeat;
+  background: url("../img/icons/icon-play-blue.svg") center no-repeat;
 }
 @media (any-hover: hover) {
   .reviews-item__link:hover .reviews-item__img {
@@ -3934,7 +3934,7 @@ body > main {
   left: 0;
   width: 80px;
   height: 80px;
-  background: url("/img/icons/icons-triangles-white-120x120.svg") center/100% no-repeat;
+  background: url("../img/icons/icons-triangles-white-120x120.svg") center/100% no-repeat;
   opacity: 1;
 }
 @media (max-width: 767px) {

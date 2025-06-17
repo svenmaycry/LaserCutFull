@@ -13,7 +13,7 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background: url('/img/icons/icon-main-page-bg-triangles.svg') center top / contain no-repeat;
+      background: url('../img/icons/icon-main-page-bg-triangles.svg') center top / contain no-repeat;
       -ms-transform: translateX(-16%);
       transform: translateX(-16%);
     }
@@ -126,7 +126,7 @@
         width: 28px;
         height: 28px;
         border-radius: 50%;
-        background: $mainWhiteColor url('/img/icons/icon-fire.svg') center / 80% no-repeat;
+        background: $mainWhiteColor url('../img/icons/icon-fire.svg') center / 80% no-repeat;
         margin-right: 5px;
       }
     }

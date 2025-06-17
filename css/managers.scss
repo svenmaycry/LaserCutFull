@@ -114,7 +114,7 @@
 
         &::after {
           content: '';
-          background: url('/img/icons/icon-star.svg') 0 0 no-repeat;
+          background: url('../img/icons/icon-star.svg') 0 0 no-repeat;
           display: inline-block;
           width: 17px;
           height: 15px;
@@ -126,7 +126,7 @@
 }
 
 .manager {
-  background: $azureColor url('/img/icons/icon-manager-triangles.svg') 0 30px / 35% no-repeat;
+  background: $azureColor url('../img/icons/icon-manager-triangles.svg') 0 30px / 35% no-repeat;
 
   @media (max-width: 767px) {
     background: $azureColor;
@@ -222,7 +222,7 @@
         left: -80px;
         width: 58px;
         height: 38px;
-        background: url('/img/icons/icon-right-quote.svg') center / contain no-repeat;
+        background: url('../img/icons/icon-right-quote.svg') center / contain no-repeat;
 
         @media (max-width: 767px) {
           display: none;

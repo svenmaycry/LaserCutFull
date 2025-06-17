@@ -475,7 +475,7 @@
         }
 
         &::after {
-          background: url('/img/icons/icon-play-red.svg') 0 0 / contain no-repeat;
+          background: url('../img/icons/icon-play-red.svg') 0 0 / contain no-repeat;
 
           @media (max-width: 767px) {
             left: 36%;
@@ -495,7 +495,7 @@
         }
 
         &::after {
-          background: url('/img/icons/icon-person-blue.svg') 0 0 / contain no-repeat;
+          background: url('../img/icons/icon-person-blue.svg') 0 0 / contain no-repeat;
         }
       }
 
@@ -514,7 +514,7 @@
         }
 
         &::after {
-          background: url('/img/icons/icon-eye-red.svg') 0 0 / contain no-repeat;
+          background: url('../img/icons/icon-eye-red.svg') 0 0 / contain no-repeat;
         }
       }
 
@@ -600,7 +600,7 @@
           border-radius: 50%;
           width: min(8vw, 52px);
           height: min(8vw, 52px);
-          background: url('/img/icons/icon-play-blue.svg') center no-repeat;
+          background: url('../img/icons/icon-play-blue.svg') center no-repeat;
         }
 
         @media (any-hover: hover) {
