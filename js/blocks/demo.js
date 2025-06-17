@@ -54,8 +54,8 @@ export const initDemo = () => {
     },
 
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      prevEl: '.js-swiper-button-prev--demo',
+      nextEl: '.js-swiper-button-next--demo',
       disabledClass: 'swiper-button-disabled',
     },
 

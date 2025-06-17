@@ -132,7 +132,6 @@
 
       .demo-item {
         &__subitem {
-
           &:first-child {
             grid-column: 1/9;
             grid-row: span 2;
@@ -154,7 +153,6 @@
     &--media {
       .demo-item {
         &__subitem {
-
           &:first-child {
             grid-column: 1/7;
             grid-row: span 2;
@@ -194,11 +192,18 @@
   }
 
   .swiper {
-    position: static;
+    position: relative;
     overflow: visible;
 
+    &:hover, &:focus {
+      .swiper-button-prev, .swiper-button-next {
+        opacity: 1;
+      }
+    }
+
     &-button-prev, &-button-next {
-      top: 25px;
+      top: 51%;
+      opacity: 0;
       height: 30px;
       width: 30px;
       border-radius: 50%;
@@ -214,44 +219,18 @@
         transform: scale(1.1);
         outline: none;
       }
-
-      @media (max-width: 767px) {
-        top: 20px;
-      }
     }
 
     &-button-prev {
-      left: 330px;
+      left: 4px;
       right: auto;
       background: $mainWhiteColor url('/img/icons/icon-left-swiper.svg') center / 12px no-repeat;
-
-      @media (max-width: 767px) {
-        left: 225px;
-      }
-
-      @media (max-width: 479px) {
-        left: 200px;
-      }
     }
 
     &-button-next {
-      left: 380px;
-      right: auto;
+      right: 4px;
+      left: auto;
       background: $mainWhiteColor url('/img/icons/icon-right-swiper.svg') center / 12px no-repeat;
-
-      @media (max-width: 767px) {
-        left: 280px;
-      }
-
-      @media (max-width: 479px) {
-        left: 255px;
-      }
-    }
-
-    &-button-disabled {
-      opacity: .35;
-      cursor: auto;
-      pointer-events: none;
     }
 
     &-pagination {
